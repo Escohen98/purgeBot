@@ -10,10 +10,13 @@ module.exports = (text, day) => {
   fs.open(file, 'a', 666, function( e, id ) {
 	if(day!==d.getDay()) {
 		var theDate = `[${d.getMonth()}/${d.getDay()}/${d.getYear()}]`;
-		fs.write( id, theDate + "\r\n", null, 'utf8');
+		fs.write( id, theDate + "\r\n", null, 'utf8', function(err, result) {
+			if(err) console.log("error", err);
+		});
 	day = d.getDay();
 	}
-    fs.write( id, time + text + "\r\n", null, 'utf8', function(){
+    fs.write( id, time + text + "\r\n", null, 'utf8', function(err, result){
+			if(err) console.log("error", err);
 		fs.close(id, function(){
 			console.log(time + text);
 		});
