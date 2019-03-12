@@ -731,3 +731,120 @@ limit: int value should be less than or equal to 100.
 [2/2/119]
 [13:3:46] [USAGE ATTEMPT]
  Draxion: ~exit
+[2/2/119]
+[13:5:0] Logged in as Test-Bot#7279!
+[2/2/119]
+[13:8:39] Logged in as Test-Bot#7279!
+[2/2/119]
+[13:11:49] Logged in as Test-Bot#7279!
+[2/2/119]
+[13:11:52] [USAGE ATTEMPT]
+ Draxion: ~reload
+[2/2/119]
+[13:12:14] [USAGE ATTEMPT]
+ Draxion: ~reload inrole
+[2/2/119]
+[13:12:51] [USAGE ATTEMPT]
+ Draxion: ~reload reload
+[2/2/119]
+[13:14:50] [USAGE ATTEMPT]
+ Draxion: ~exit
+[2/2/119]
+[13:15:21] Logged in as Test-Bot#7279!
+[2/2/119]
+[13:15:29] [USAGE ATTEMPT]
+ Draxion: ~reload
+[2/2/119]
+[13:15:55] [USAGE ATTEMPT]
+ Draxion: ~exirt
+[2/2/119]
+[13:15:56] [USAGE ATTEMPT]
+ Draxion: ~exit
+[2/2/119]
+[13:16:2] Logged in as Test-Bot#7279!
+[2/2/119]
+[13:16:6] [USAGE ATTEMPT]
+ Draxion: ~reload
+[2/2/119]
+[13:16:12] [USAGE ATTEMPT]
+ Draxion: ~reload hi
+[2/2/119]
+[13:17:3] [USAGE ATTEMPT]
+ Draxion: ~exit
+[2/2/119]
+[13:17:9] Logged in as Test-Bot#7279!
+[2/2/119]
+[13:17:13] [USAGE ATTEMPT]
+ Draxion: ~reload
+[2/2/119]
+[13:17:16] [USAGE ATTEMPT]
+ Draxion: ~reload hi
+[2/2/119]
+[13:17:37] [USAGE ATTEMPT]
+ Draxion: ~exit
+[2/2/119]
+[13:17:42] Logged in as Test-Bot#7279!
+[2/2/119]
+[13:17:45] [USAGE ATTEMPT]
+ Draxion: ~reload
+[2/2/119]
+[13:17:59] [USAGE ATTEMPT]
+ Draxion: ~reload hi
+[2/2/119]
+[13:26:25] [USAGE ATTEMPT]
+ Draxion: ~exit
+[2/2/119]
+[13:30:45] Logged in as Test-Bot#7279!
+[2/2/119]
+[13:34:32] [USAGE ATTEMPT]
+ Draxion: ~reload help
+[2/2/119]
+[13:34:36] [USAGE ATTEMPT]
+ Draxion: ~reload info
+[2/2/119]
+[13:34:42] [USAGE ATTEMPT]
+ Draxion: ~exit
+[2/2/119]
+[13:35:41] Logged in as Test-Bot#7279!
+[2/2/119]
+[13:37:10] Logged in as Test-Bot#7279!
+[2/2/119]
+[13:37:31] [USAGE ATTEMPT]
+ Draxion: ~purge 1
+[2/2/119]
+[13:37:31] 2 message(s) deleted!
+[2/2/119]
+[13:41:22] Logged in as Test-Bot#7279!
+[2/2/119]
+[13:42:26] Logged in as Test-Bot#7279!
+[2/2/119]
+[13:42:30] [USAGE ATTEMPT]
+ Draxion: ~help
+[2/2/119]
+[13:43:18] [USAGE ATTEMPT]
+ Draxion: ~reload reload
+[2/2/119]
+[13:44:14] [USAGE ATTEMPT]
+ Draxion: ~reload help
+[2/2/119]
+[13:44:15] [USAGE ATTEMPT]
+ Draxion: ~help
+[2/2/119]
+[13:44:22] [USAGE ATTEMPT]
+ Draxion: ~exit
+[2/2/119]
+[13:44:28] Logged in as Test-Bot#7279!
+[2/2/119]
+[13:45:44] [USAGE ATTEMPT]
+ Draxion: ~help
+[2/2/119]
+[13:46:7] [USAGE ATTEMPT]
+ Draxion: ~purge
+[2/2/119]
+[13:46:10] [USAGE ATTEMPT]
+ Draxion: ~purge 99
+[2/2/119]
+[13:46:10] 99 message(s) deleted!
+[2/2/119]
+[13:46:32] [USAGE ATTEMPT]
+ Draxion: ~exit

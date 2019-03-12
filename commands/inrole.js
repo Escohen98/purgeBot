@@ -18,15 +18,16 @@ exports.run = (client, msg, args) => {
             msg.reply(`${role} does not exist on this server.`);
             return;
         }
-        console.log(typeof mmbrs);
+        //TODO - Implement Multiple Roles.
+        //console.log(typeof mmbrs);
         //Removes members who have previous role but not current role.
-        for(const c of mmbrs) {
+        //for(const c of mmbrs) {
 
-            if(!c.roles.has(role.name = role)) {
-               // mmbrs.delete(c);
+            //if(!c.roles.has(role.name = role)) {
+        //mmbrs.filter(c => c.roles.has(role.name = role));
 
-            }
-        }
+          //  }
+        //}
     }
 
     var message = `#List of members in ${args[0]}`;
