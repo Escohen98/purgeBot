@@ -1,6 +1,6 @@
 module.exports = (client) => {
   const logger = client.logger;
-  client.help.set('help', 'view all commands');
+  client.help.set('help', `\`${client.config.command_prefix}help\`view all commands`);
  // client.help.set('cmd', `\`${client.config.command_prefix}cmd [character]\` to change the command_prefix for this bot. Current prefix: \`${command_prefix}\`.`);
  // client.help.set('list', `\`${client.config.command_prefix}list\` prints out the channel ids of all channels in the purge list.`);
   client.help.set('purge', `\`${client.config.command_prefix}purge [count]\` clears a defined number non-pinned messages in given channel.`);
