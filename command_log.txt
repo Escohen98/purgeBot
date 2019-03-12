@@ -1,0 +1,629 @@
+[7/6/118]
+[19:4:26] Logged in as Test-Bot#7279!
+[7/6/118]
+[19:4:36] [USAGE ATTEMPT]
+ DraXion: ~test
+[7/6/118]
+[19:34:17] Logged in as Test-Bot#7279!
+[7/6/118]
+[19:42:25] Logged in as Test-Bot#7279!
+[7/6/118]
+[19:51:19] Logged in as Test-Bot#7279!
+[7/6/118]
+[19:51:49] Logged in as Test-Bot#7279!
+[7/6/118]
+[19:55:14] Logged in as Test-Bot#7279!
+[7/6/118]
+[19:58:55] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:0:26] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:3:51] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:7:31] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:9:35] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:11:14] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:12:49] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:13:59] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:15:15] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:18:30] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:18:38] [USAGE ATTEMPT]
+ DraXion: ~exit
+[7/6/118]
+[20:19:14] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:19:24] [USAGE ATTEMPT]
+ DraXion: ~exit
+[7/6/118]
+[20:21:16] Logged in as Test-Bot#7279!
+[20:21:35] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[7/6/118]
+[20:21:35] 10 message(s) deleted!
+[7/6/118]
+[20:21:41] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[20:21:41] 10 message(s) deleted!
+[7/6/118]
+[20:21:45] [USAGE ATTEMPT]
+ DraXion: ~purge 2
+[7/6/118]
+[20:21:45] 20 message(s) deleted!
+[7/6/118]
+[20:23:59] [USAGE ATTEMPT]
+ DraXion: ~exit
+[7/6/118]
+[20:24:3] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:24:7] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[20:24:7] 10 message(s) deleted!
+[7/6/118]
+[20:25:0] [USAGE ATTEMPT]
+ DraXion: ~exit
+[7/6/118]
+[20:25:5] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:25:12] [USAGE ATTEMPT]
+ DraXion: ~eval (2+2)
+[7/6/118]
+[20:25:29] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[20:25:29] 10 message(s) deleted!
+[7/6/118]
+[20:25:58] [USAGE ATTEMPT]
+ DraXion: ~exit
+[7/6/118]
+[20:26:3] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:26:12] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[20:26:12] 10 message(s) deleted!
+[7/6/118]
+[20:27:49] [USAGE ATTEMPT]
+ DraXion: ~reload
+[7/6/118]
+[20:28:51] [USAGE ATTEMPT]
+ DraXion: ~reload
+[7/6/118]
+[20:29:1] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[20:29:1] 10 message(s) deleted!
+[7/6/118]
+[20:29:16] [USAGE ATTEMPT]
+ DraXion: ~exit
+[7/6/118]
+[20:29:34] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:29:42] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[20:29:42] TypeError: unpinnedMessages.size is not a function
+[7/6/118]
+[20:29:42] Error while doing Bulk Delete
+[7/6/118]
+[20:30:10] [USAGE ATTEMPT]
+ DraXion: ~reload
+[7/6/118]
+[20:30:21] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[20:30:21] TypeError: unpinnedMessages.size is not a function
+[7/6/118]
+[20:30:21] Error while doing Bulk Delete
+[7/6/118]
+[20:30:24] [USAGE ATTEMPT]
+ DraXion: ~exit
+[7/6/118]
+[20:30:28] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:30:31] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[20:30:31] 10 message(s) deleted!
+[20:31:2] [USAGE ATTEMPT]
+ DraXion: ~purgeChannel
+[7/6/118]
+[7/6/118]
+[20:31:2] Test-Bot: <@192359157930655744>, All messages in <#341442509626540032> will now be deleted.
+[7/6/118]
+[20:31:5] DraXion: test
+[7/6/118]
+[20:31:7] DraXion: great...
+[7/6/118]
+[20:31:52] DraXion: ~exit
+[7/6/118]
+[20:31:52] [USAGE ATTEMPT]
+ DraXion: ~exit
+[7/6/118]
+[20:31:52] Test-Bot: <@192359157930655744>, You have initiated the emergency shutdown command.
+Bot will be shut down entirely.
+[7/6/118]
+[20:31:56] Logged in as Test-Bot#7279!
+[7/6/118]
+[20:32:5] [USAGE ATTEMPT]
+ DraXion: ~purgeChannel
+[7/6/118]
+[20:32:5] Test-Bot: <@192359157930655744>, All messages in <#341442509626540032> will now be deleted.
+[20:32:14] DraXion: ~purge 1
+[7/6/118]
+[20:32:14] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[7/6/118]
+[20:32:14] 10 message(s) deleted!
+[7/6/118]
+[20:32:14] Test-Bot: 10 message(s) deleted!
+[7/6/118]
+[20:32:28] [USAGE ATTEMPT]
+ DraXion: ~purgeChannel
+[7/6/118]
+[20:32:28] DraXion: ~purgeChannel
+[7/6/118]
+[20:33:39] [USAGE ATTEMPT]
+ DraXion: ~reload
+[7/6/118]
+[20:34:35] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/6/118]
+[20:34:55] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[20:34:55] 10 message(s) deleted!
+[7/6/118]
+[20:34:59] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/6/118]
+[20:35:2] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[20:35:3] 10 message(s) deleted!
+[7/6/118]
+[20:35:18] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/6/118]
+[20:35:21] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[20:35:21] 0 message(s) deleted!
+[7/6/118]
+[20:36:12] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/6/118]
+[20:36:21] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[20:36:21] 10 message(s) deleted!
+[7/6/118]
+[20:36:42] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/6/118]
+[20:36:45] [USAGE ATTEMPT]
+ DraXion: ~Purge 1
+[7/6/118]
+[20:36:57] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/6/118]
+[20:37:0] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[20:37:0] 1 message(s) deleted!
+[7/6/118]
+[20:37:4] [USAGE ATTEMPT]
+ DraXion: ~purge 2
+[7/6/118]
+[20:37:4] 2 message(s) deleted!
+[7/6/118]
+[20:37:9] [USAGE ATTEMPT]
+ DraXion: ~purge 3
+[7/6/118]
+[20:37:9] 3 message(s) deleted!
+[7/6/118]
+[20:38:21] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/6/118]
+[20:38:25] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/6/118]
+[20:38:26] 1 message(s) deleted!
+[7/6/118]
+[20:38:34] [USAGE ATTEMPT]
+ DraXion: ~purge 2
+[7/6/118]
+[20:38:34] 2 message(s) deleted!
+[7/6/118]
+[20:39:4] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/6/118]
+[20:39:8] [USAGE ATTEMPT]
+ DraXion: ~purge 2
+[7/6/118]
+[20:39:8] 21 message(s) deleted!
+[7/0/118]
+[0:44:40] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/0/118]
+[0:44:47] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/0/118]
+[0:44:47] 11 message(s) deleted!
+[0:50:49] [USAGE ATTEMPT]
+ DraXion: ~purge 1000
+[7/0/118]
+[7/0/118]
+[0:50:53] [USAGE ATTEMPT]
+ DraXion: ~purge 99
+[7/0/118]
+[0:50:57] [USAGE ATTEMPT]
+ DraXion: ~purge 98
+[7/0/118]
+[0:51:1] [USAGE ATTEMPT]
+ DraXion: ~purge 97
+[7/0/118]
+[0:51:4] [USAGE ATTEMPT]
+ DraXion: ~purge 80
+[7/0/118]
+[0:51:46] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/0/118]
+[0:51:46] 11 message(s) deleted!
+[7/0/118]
+[0:53:1] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/0/118]
+[0:53:11] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/0/118]
+[0:53:12] 1 message(s) deleted!
+[7/0/118]
+[0:55:49] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/0/118]
+[0:56:5] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/0/118]
+[0:56:15] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/0/118]
+[0:56:22] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/0/118]
+[0:56:31] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/0/118]
+[0:56:35] [USAGE ATTEMPT]
+ DraXion: ~exit
+[7/0/118]
+[0:56:40] Logged in as Test-Bot#7279!
+[7/0/118]
+[0:56:46] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/0/118]
+[0:56:46] 1 message(s) deleted!
+[7/0/118]
+[0:56:51] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/0/118]
+[0:56:51] 1 message(s) deleted!
+[7/0/118]
+[0:57:0] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[0:57:4] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/0/118]
+[7/0/118]
+[0:57:14] [USAGE ATTEMPT]
+ DraXion: ~exit
+[7/0/118]
+[0:57:34] Logged in as Test-Bot#7279!
+[7/0/118]
+[0:58:11] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/0/118]
+[0:58:11] 1 message(s) deleted!
+[7/0/118]
+[1:2:4] [USAGE ATTEMPT]
+ DraXion: ~reload purger
+[7/0/118]
+[1:2:6] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/0/118]
+[1:2:8] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/0/118]
+[1:2:9] 11 message(s) deleted!
+[7/0/118]
+[1:13:6] [USAGE ATTEMPT]
+ DraXion: ~purge 15
+[7/0/118]
+[1:13:6] DiscordAPIError: Invalid Form Body
+limit: int value should be less than or equal to 100.
+[7/0/118]
+[1:13:6] Error while doing Bulk Delete
+[7/0/118]
+[1:13:11] [USAGE ATTEMPT]
+ DraXion: ~purge 15
+[7/0/118]
+[1:13:11] DiscordAPIError: Invalid Form Body
+limit: int value should be less than or equal to 100.
+[7/0/118]
+[1:13:11] Error while doing Bulk Delete
+[7/0/118]
+[1:13:15] [USAGE ATTEMPT]
+ DraXion: ~help
+[1:13:20] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/0/118]
+[7/0/118]
+[1:13:20] 11 message(s) deleted!
+[7/0/118]
+[1:13:24] [USAGE ATTEMPT]
+ DraXion: ~purge 14
+[7/0/118]
+[1:13:24] Error while doing Bulk Delete
+[7/0/118]
+[1:13:24] DiscordAPIError: Invalid Form Body
+limit: int value should be less than or equal to 100.
+[7/0/118]
+[1:13:29] [USAGE ATTEMPT]
+ DraXion: ~purge 12
+[7/0/118]
+[1:13:29] DiscordAPIError: Invalid Form Body
+limit: int value should be less than or equal to 100.
+[7/0/118]
+[1:13:29] Error while doing Bulk Delete
+[7/0/118]
+[1:13:32] [USAGE ATTEMPT]
+ DraXion: ~purge 1
+[7/0/118]
+[1:13:32] 11 message(s) deleted!
+[7/0/118]
+[1:14:11] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/0/118]
+[1:14:15] [USAGE ATTEMPT]
+ DraXion: ~purge 12
+[7/0/118]
+[1:14:15] Error while doing Bulk Delete
+[7/0/118]
+[1:14:15] DiscordAPIError: Invalid Form Body
+limit: int value should be less than or equal to 100.
+[7/0/118]
+[1:14:28] [USAGE ATTEMPT]
+ DraXion: ~Purge 8
+[7/0/118]
+[1:14:28] 81 message(s) deleted!
+[7/0/118]
+[1:16:58] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/0/118]
+[1:17:1] [USAGE ATTEMPT]
+ DraXion: ~purge 2
+[7/0/118]
+[1:17:1] 21 message(s) deleted!
+[7/0/118]
+[1:18:54] [USAGE ATTEMPT]
+ DraXion: ~reload purge
+[7/0/118]
+[1:18:57] [USAGE ATTEMPT]
+ DraXion: ~purge 2
+[7/0/118]
+[1:18:57] 3 message(s) deleted!
+[7/0/118]
+[1:21:0] [USAGE ATTEMPT]
+ DraXion: ~reload message.js
+[7/0/118]
+[1:21:4] [USAGE ATTEMPT]
+ DraXion: ~exit
+[7/0/118]
+[1:21:8] Logged in as Test-Bot#7279!
+[7/0/118]
+[1:21:11] [USAGE ATTEMPT]
+ DraXion: ~purge 2
+[7/0/118]
+[1:21:11] 3 message(s) deleted!
+[7/0/118]
+[2:51:52] Logged in as Test-Bot#7279!
+[7/0/118]
+[2:51:59] [USAGE ATTEMPT]
+ DraXion: ~purge 2
+[7/0/118]
+[2:51:59] 3 message(s) deleted!
+[7/0/118]
+[2:55:45] [USAGE ATTEMPT]
+ DraXion: ~reload exit
+[7/0/118]
+[2:55:48] [USAGE ATTEMPT]
+ DraXion: ~exit
+[7/0/118]
+[2:56:3] Logged in as Test-Bot#7279!
+[7/0/118]
+[2:56:6] [USAGE ATTEMPT]
+ DraXion: ~exit
+[7/0/118]
+[2:56:16] Logged in as Test-Bot#7279!
+[7/0/118]
+[2:56:35] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff
+[7/0/118]
+[2:57:4] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[2:57:8] [USAGE ATTEMPT]
+ DraXion: ~inrole staff
+[7/0/118]
+[2:58:9] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[2:58:14] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff
+[7/0/118]
+[2:58:43] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[2:58:50] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff
+[7/0/118]
+[2:59:0] [USAGE ATTEMPT]
+ DraXion: ~inrole
+[7/0/118]
+[2:59:27] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[2:59:30] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff
+[7/0/118]
+[3:15:7] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[3:16:54] Logged in as Test-Bot#7279!
+[7/0/118]
+[3:17:53] Logged in as Test-Bot#7279!
+[7/0/118]
+[3:18:22] Logged in as Test-Bot#7279!
+[7/0/118]
+[3:18:53] Logged in as Test-Bot#7279!
+[7/0/118]
+[3:26:36] Logged in as Test-Bot#7279!
+[7/0/118]
+[3:27:43] Logged in as Test-Bot#7279!
+[7/0/118]
+[3:29:5] Logged in as Test-Bot#7279!
+[7/0/118]
+[3:29:19] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff
+[3:35:54] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[7/0/118]
+[3:35:58] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff
+[7/0/118]
+[3:36:20] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[3:36:30] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff
+[7/0/118]
+[7/0/118]
+[3:37:47] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[3:38:8] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff
+[7/0/118]
+[3:38:39] Logged in as Test-Bot#7279!
+[7/0/118]
+[3:38:44] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff
+[7/0/118]
+[3:46:10] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[3:46:16] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff
+[7/0/118]
+[3:47:28] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff Champion
+[7/0/118]
+[3:48:3] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[3:49:56] Logged in as Test-Bot#7279!
+[7/0/118]
+[3:50:11] Logged in as Test-Bot#7279!
+[7/0/118]
+[3:50:16] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff Champion
+[7/0/118]
+[3:50:53] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[3:50:57] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff Champion
+[7/0/118]
+[3:51:58] [USAGE ATTEMPT]
+ DraXion: ~exit
+[7/0/118]
+[3:52:2] Logged in as Test-Bot#7279!
+[7/0/118]
+[3:52:10] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff Champion
+[7/0/118]
+[3:54:50] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[3:54:54] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff Champion
+[3:55:4] [USAGE ATTEMPT]
+ DraXion: ~inrole Champion
+[7/0/118]
+[7/0/118]
+[3:55:9] [USAGE ATTEMPT]
+ DraXion: ~inrole Champion Staff
+[7/0/118]
+[3:55:41] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[3:55:46] [USAGE ATTEMPT]
+ DraXion: ~inrole Champion Staff
+[7/0/118]
+[3:57:58] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[3:58:3] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff Champion
+[7/0/118]
+[4:0:55] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[4:1:24] Logged in as Test-Bot#7279!
+[7/0/118]
+[4:2:11] Logged in as Test-Bot#7279!
+[7/0/118]
+[4:3:26] Logged in as Test-Bot#7279!
+[7/0/118]
+[4:4:42] Logged in as Test-Bot#7279!
+[7/0/118]
+[4:5:33] Logged in as Test-Bot#7279!
+[7/0/118]
+[4:5:37] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff Champion
+[7/0/118]
+[4:6:23] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[4:6:55] Logged in as Test-Bot#7279!
+[7/0/118]
+[4:9:0] Logged in as Test-Bot#7279!
+[7/0/118]
+[4:10:23] Logged in as Test-Bot#7279!
+[7/0/118]
+[4:11:6] Logged in as Test-Bot#7279!
+[7/0/118]
+[4:11:10] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff Champion
+[7/0/118]
+[4:14:2] [USAGE ATTEMPT]
+ DraXion: ~reload inrole
+[7/0/118]
+[4:18:5] Logged in as Test-Bot#7279!
+[7/0/118]
+[4:18:56] Logged in as Test-Bot#7279!
+[7/0/118]
+[4:19:18] Logged in as Test-Bot#7279!
+[7/0/118]
+[4:19:26] [USAGE ATTEMPT]
+ DraXion: ~inrole Staff Champion

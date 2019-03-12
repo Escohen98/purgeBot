@@ -1,0 +1,212 @@
+const Discord = require("discord.js");
+const config = require("./config.json");
+const fs = require('fs');
+const client = new Discord.Client();
+const file = "command_log.txt"
+
+var command_prefix = config.command_prefix; //Prefix required to initiate the bot.
+var help = new Map(); //Map for documentation of all commands.
+var purge = new Set(); //Set of all channels to purge the chat.
+var flag = false; //A Flag to delete bot messages.
+
+const rl = config.server_id1; //WGARL server id
+const rcrl = config.channel_id1; //WGARL role-commands channel id
+const wga = config.server_id2; //WGA server id
+const rcwga = config.channel_id2; //WGA role-commands channel id
+const ownerID = config.owner_id; //My discord id
+
+client.on('ready', () => {
+  help.set('help', 'view all commands');
+  help.set('cmd', `\`${command_prefix}cmd [character]\` to change the command_prefix for this bot. Current prefix: \`${command_prefix}\`.`);
+  help.set('list', `\`${command_prefix}list\` prints out the channel ids of all channels in the purge list.`);
+  help.set('purge', `\`${command_prefix}purge [count]\` clears a defined number non-pinned messages in given channel.`);
+  help.set('purgeChannel', `\`${command_prefix}purgeChannel\` enables/disables purging for all future messages in given channel.`);
+  help.set('eval', `\`${command_prefix}eval [code]\` evaluates given d.js code. Bot Owner Only.`);
+  help.set(`exit`, `\`${command_prefix}exit\` shuts bot down. Passcode required. Bot Owner Only`);
+  
+  purge.add(getChannel(rl, rcrl));
+  purge.add(getChannel(wga,rcwga));
+ // purge.add(rcwga); //Auto-adds role-commands channel on WGARL an WGA to purge list.
+ // purge.add(rcrl);
+  
+  processInput(`Logged in as ${client.user.tag}!`);
+});
+
+//Returns channel object of given channel on the given server. 
+function getChannel(serv, chan) {
+	for(const srvr of client.guilds.values()) {
+		if(srvr.id === serv) {
+			for(const chnl of srvr.channels.values()) {
+				if(chnl.id === chan) {
+					return chnl;
+				}
+			}
+		}
+	}
+	return null;
+}
+client.on('message', msg => {
+	//Deletes bot messages using a flag.
+	if(flag) {
+		msg.delete(3000)
+		flag = !flag;
+	}
+	
+	
+    //Command string must contain the specified command_prefix and be called by a user with the administrator permission.
+    else if(msg.content.substring(0,1) === command_prefix && (msg.member.hasPermission("ADMINISTRATOR") || msg.author.id === '192359157930655744')) {
+        var cmd = msg.content.substring(1);
+
+            //Prints out a list of all commands and their descriptions
+        if(cmd === 'help') {
+            var display = '\n__List of all commands__';
+            for (var[key, value] of help.entries()) {
+                display += ('\n**'+key + '**		' + value);
+        }
+        msg.reply(display);
+    }
+	 
+			//Changes the command_prefix to content proceeding the command.
+			//Displays currernt command_prefix if parameters are left empty.
+		else if(cmd.includes('cmd')) {
+			var temp = msg.content.substring(4).trim();
+			if(temp.length === 0)
+				msg.reply('The current prefix is `' + command_prefix + '`');
+			else if(temp.length === 1) {
+				command_prefix = temp;
+				msg.reply('Command prefix changed to ' + command_prefix); 
+			} else
+				msg.reply('Please keep the command to only 1 character.');
+		}
+		
+		//Turns purging on or off for given channel.
+		else if(cmd.includes('purgeChannel')) {
+			var chnl = msg.channel;
+			if(purge.has(chnl)) {
+				purge.delete(chnl);
+				msg.reply(`All messages in ${chnl} will no longer be deleted.`);
+			} else {
+				purge.add(chnl);
+				msg.reply(`All messages in ${chnl} will now be deleted.`);
+			}
+		 }
+		 
+		 //Clears all non-pinned messages to a specified amount
+		else if(cmd.includes('purge') || cmd.includes('clear')) {
+			var temp = parseInt(msg.content.substring(6).trim()) || 0;
+			if(temp < 1 || temp > 99)
+				msg.reply('Please select a number from 1-99');
+			else {
+				temp+=1;
+				msg.channel.fetchMessages({limit: temp}).then(messages => {
+					const unpinnedMessages = messages.filter(msg => !(msg.pinned)); //A collection of messages that aren't 
+					msg.channel.bulkDelete(unpinnedMessages, true);
+					msgsDeleted = unpinnedMessages.array().length-1; // number of messages deleted
+					msg.channel.send(msgsDeleted + ' message(s) deleted!');
+					processInput(msgsDeleted + ' message(s) deleted!');
+				}).catch(err => {
+					processInput('Error while doing Bulk Delete');
+					processInput(err);
+				});
+				
+				flag = true;
+				
+				//msg.delete(3000)  
+			}
+			
+		}
+				
+		//Lists channel ids in purge. 
+		else if(cmd.includes('list')) {
+			for (var[entry] of purge.entries()) {
+				msg.channel.send(entry.id);
+			}
+		}
+		//Shuts bot down. Bot Owner Access Only!
+		else if(cmd.includes('exit')) {
+			if(msg.author.id === ownerID) {
+				msg.reply(`You have initiated the emergency shutdown command.\nBot will be shut down entirely.`);
+				setTimeout(() => {
+					msg.reply(`Good Bye!`);
+					window.exit();
+				},3000);
+			} else {
+				msg.reply("Sorry, you must be the bot owner in-order to use this command."); 
+			}
+		} 
+
+		//Evaluate code through discord. Bot Owner Access Only!
+		else if (cmd.startsWith("eval")) {
+			if(msg.author.id !== ownerID) {
+				msg.reply("Sorry, you must be the bot owner in-order to use this command.");
+				return;
+			}
+			const args = cmd.split(" ").slice(1);
+			try {
+				const code = args.join(" ");
+				let evaled = eval(code);
+
+				if (typeof evaled !== "string")
+					evaled = require("util").inspect(evaled);
+
+				msg.channel.send(clean(evaled), {code:"xl"});
+			} catch (err) {
+				msg.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+			}
+		}
+		//Courtesy message for incorrect bot calls.
+		//else {
+		//	msg.reply(`Sorry, that is not a command. Please type \`${command_prefix}help\` for a list of commands.`);
+		//}
+	}
+   
+//Deletes all non-pinned messages in any channel that is added to purge.
+   if(purge.has(msg.channel) && !(msg.pinned)) {
+      msg.delete(1000);
+	  var d = new Date();
+	  d.get
+	  processInput(`${msg.author.username}: ${msg.content}`);   
+   } 
+   
+   //Logs anyone trying to use the bot.
+   if(msg.content.substring(0,1) === command_prefix) {
+	   var d = new Date();
+	   processInput(`[USAGE ATTEMPT]\n ${msg.author.username}: ${msg.content}`);   
+   }
+});
+var day = " ";
+//Write to log file
+function processInput ( text ) 
+{     
+  var d = new Date();
+  var time = `[${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}] `;
+  fs.open(file, 'a', 666, function( e, id ) {
+	if(day!==d.getDay()) {
+		var theDate = `[${d.getMonth()}/${d.getDay()}/${d.getYear()}]`;
+		fs.write( id, theDate + "\r\n", null, 'utf8');
+	day = d.getDay();
+	}
+    fs.write( id, time + text + "\r\n", null, 'utf8', function(){
+		fs.close(id, function(){
+			console.log(time + text);
+		});
+    });
+  });
+ }
+
+//For Eval command
+function clean(text) {
+  if (typeof(text) === "string")
+    return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+  else
+      return text;
+}
+//For Eval command
+/*const clean = text => {
+  if (typeof(text) === "string")
+    return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+  else
+      return text;
+}*/
+
+client.login(config.token);

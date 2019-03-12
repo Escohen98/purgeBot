@@ -1,0 +1,7 @@
+/*module.exports = (client, msg) => {
+ var display = '\n__List of all commands__';
+            for (var[key, value] of client.help.entries()) {
+                display += ('\n**'+key + '**		' + value);	
+			}
+ msg.reply(display);
+}*/
