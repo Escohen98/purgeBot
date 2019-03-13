@@ -37,8 +37,8 @@ module.exports = (client, msg) => {
 	//Standard for splitting a command string.
 	const args = msg.content.slice(client.config.command_prefix.length).trim().split(/ +/g);
 	var command = args.shift().toLowerCase();
-	console.log(command);
-	console.log(args);
+	console.log("command: ", command);
+	console.log("args: ", args);
 
 	//Get command data from client.commands enmap
 	const cmd = client.commands.get(command);
