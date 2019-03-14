@@ -1,12 +1,9 @@
 //Copyright (c) 2019, Eric Cohen.
 exports.run = (client, msg, args) => {
     console.log(args);
-    const rles = msg.guild.roles;
+    //Makes sure user specifies a role
     if (args.length < 1) {
         msg.reply("Please specify at least 1 existing role.");
-        return;
-    } else if(!rles.some(element => element.name.toLowerCase() === args[0].toLowerCase())) {
-        msg.reply(`\`${args[0]}\` does not exist on this server.`);
         return;
     }
     //Combines args that are not separated by a comma.
@@ -17,6 +14,12 @@ exports.run = (client, msg, args) => {
         }
         //Removes comma
           args[i] = args[i].replace(',', '').trim();
+    }
+    const rles = msg.guild.roles;
+    //Makes sure role exists on server
+    if(!rles.some(element => element.name.toLowerCase() === args[0].toLowerCase())) {
+        msg.reply(`\`${args[0]}\` does not exist on this server.`);
+        return;
     }
 
     let mmbrs = rles.find(element => element.name.toLowerCase() === args[0].toLowerCase());
