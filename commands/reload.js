@@ -8,7 +8,7 @@ exports.run =async (client, message, args) => {
   } else if(!client.commands.has(commandName)) {
     return message.reply(`The command \`${commandName}\` does not exist.`);
   } else if(commandName.trim() == "reload") {
-    return message.reply("The reload command cannot be reloaded.");
+    return message.reply("The \`reload\` command cannot be reloaded.");
   }
   // the path is relative to the *current folder*, so just ./filename.js
   delete require.cache[require.resolve(`./${commandName}.js`)];
