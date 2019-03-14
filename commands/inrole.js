@@ -73,7 +73,9 @@ exports.run = (client, msg, args) => {
             message+=`\n* ${c.displayName}`;
     }
   } else { //if only one role because mmbrs is not iterable if of size 1.
-    const c = mmbrs[0];
+    let c;
+    if(mmbrs)
+      c = mmbrs[0];
     if(c.nickname != null)
         message+=`\n* ${c.nickname}`;
     else
