@@ -11,7 +11,7 @@ exports.run = (client, msg, args) => {
           args.splice(i+1, 1);
         }
         //Removes comma
-          args[i] = args[i].replace(',', '');
+          args[i] = args[i].replace(',', '').trim();
           //args[i] = args[i].substring(0, args.length-1);
     }
     const rles = msg.guild.roles;
@@ -27,7 +27,8 @@ exports.run = (client, msg, args) => {
 
      //Checks if role exists on server. If returns a does not exist message,
      //otherwise prints out roles.
-      for(const role of argv) {
+      for(let role of argv) {
+          role = role.trim();
           if(!rles.exists("name", role)) {
               msg.reply(`${role} does not exist on this server.`);
               return;
@@ -37,12 +38,9 @@ exports.run = (client, msg, args) => {
           //Removes members who have previous role but not current role.
           if(mmbrs) {
           let temp = [];
-          for(const c of mmbrs) {
-              //if(!c.roles.has(role.name = role)) {
-              //  mmbrs.filter(c => c.roles.has(role.name = role));
-              //}
-              if(c.roles.has(role.name = role)) {
-                console.log("yes!");
+          for(const c of mmbrs.values()) {
+              //c.roles is a map and must compare the ids, not names.
+              if(c.roles.has(rles.find("name",role).id)) {
                 temp.push(c);
               }
           }
@@ -59,7 +57,7 @@ exports.run = (client, msg, args) => {
     if(mmbrs) {
     //Prints members in given role(s).
     //Will print nickname if exists otherwise displayname.
-    for (const c of mmbrs) {
+    for (const c of mmbrs.values()) {
         if(c.nickname != null)
             message+=`\n * ${c.nickname}`;
         else
