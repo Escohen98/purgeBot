@@ -1,3 +1,4 @@
+//Copyright (c) 2019, Eric Cohen.
 module.exports = (client) => {
   const logger = client.logger;
   client.help.set('help', `\`${client.config.command_prefix}help\`view all commands`);

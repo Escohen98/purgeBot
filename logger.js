@@ -1,3 +1,4 @@
+//Copyright (c) 2019, Eric Cohen.
 //Write to log file
 module.exports = (text, day) => {
 	const fs = require("fs");

@@ -1,3 +1,4 @@
+//Copyright (c) 2019, Eric Cohen.
 exports.run =async (client, message, args) => {
   //if(!args || args.size < 1) return message.reply("Must provide a command name to reload.");
   const commandName = args[0];

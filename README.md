@@ -1,6 +1,6 @@
 # purgeBot
 A Discord bot to delete messages.
-
+Copyright (c) 2019, Eric Cohen.
 ## List of all commands
 **help**                         `~help` view all commands <br />
 **inrole**                      `~inrole role1, role2,..., roleN` Checks which users are in given role(s). <br />
@@ -35,4 +35,5 @@ A Discord bot to delete messages.
 ```
 
 ##Other Notes
-  * The contents of the help command are set in ready.js. You will need to change the end of the descriptions based on what permissions (permissions_level, public_cmds) you set in the config.
+  * The contents of the help command are set in ready.js. You will need to change the end of the descriptions based on what permissions (permissions_level, public_cmds) you set in the config
+  * The eval command seems to be broken. Try at your own risk.

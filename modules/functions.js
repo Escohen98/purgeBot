@@ -1,3 +1,4 @@
+//Copyright (c) 2019, Eric Cohen.
 module.exports = (client) => {
 
     //For Eval Command
@@ -27,6 +28,6 @@ module.exports = (client) => {
             }
         }
         return null;
-    }		
+    }
 
 }

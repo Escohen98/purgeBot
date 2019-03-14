@@ -1,3 +1,4 @@
+//Copyright (c) 2019, Eric Cohen.
 //Shuts down bot. Probably forces RunTime error to end execution.
 exports.run = (client, msg, args) => {
     console.log("test");

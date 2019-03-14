@@ -1,3 +1,4 @@
+//Copyright (c) 2019, Eric Cohen.
 exports.run = (client, msg, args) => {
     const logger = client.logger;
     console.log(args);
@@ -21,7 +22,7 @@ exports.run = (client, msg, args) => {
 					logger(err, client.day);
 				});
 			}
-				
-				
-				//msg.delete(3000)  
+
+
+				//msg.delete(3000)
 }

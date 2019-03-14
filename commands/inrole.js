@@ -1,3 +1,4 @@
+//Copyright (c) 2019, Eric Cohen.
 exports.run = (client, msg, args) => {
     console.log(args);
     if (args.length < 1) {

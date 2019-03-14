@@ -1,3 +1,4 @@
+//Copyright (c) 2019, Eric Cohen.
 exports.run = async (client, msg, args) => {
 var chnl = msg.channel;
 	if(client.purge.has(chnl)) {

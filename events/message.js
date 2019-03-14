@@ -1,3 +1,4 @@
+//Copyright (c) 2019, Eric Cohen.
 module.exports = (client, msg) => {
 
 	//Use if printing or logging outside of if statements or commands
@@ -42,7 +43,6 @@ module.exports = (client, msg) => {
   if (!client.config.public_cmds.includes(cmmd) &&
       !(msg.member.hasPermission(client.config.permission_level) ||
       msg.author.id === client.config.owner_id)){
-          msg.reply("You do not have permission to use this command.");
          return;
        }
       console.log(client.commands);
