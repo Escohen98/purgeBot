@@ -14,8 +14,7 @@ exports.run = (client, msg, args) => {
           args[i] = args[i].replace(',', '').trim();
     }
     const rles = msg.guild.roles;
-    console.log("args[0]: ", args[0]);
-    let mmbrs  = rles.find("name", args[0])
+    let mmbrs = rles.find(element => element.name.toLowerCase() === args[0].toLowerCase());
       if(mmbrs) mmbrs = mmbrs.members; //Members in first listed role
     //Because interpreted values
     const iterable = args.length > 0;
@@ -33,13 +32,13 @@ exports.run = (client, msg, args) => {
               return;
           }
           //TODO - Implement Multiple Roles.
-          //console.log(typeof mmbrs);
           //Removes members who have previous role but not current role.
           if(mmbrs) {
           let temp = [];
           for(const c of mmbrs.values()) {
               //c.roles is a map and must compare the ids, not names.
-              if(c.roles.has(rles.find("name",role).id)) {
+              if(c.roles.has(rles.find(element => element.name.toLowerCase() ===
+                                      role.toLowerCase()).id)) {
                 temp.push(c);
               }
           }
