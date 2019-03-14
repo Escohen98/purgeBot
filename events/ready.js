@@ -5,7 +5,7 @@ module.exports = (client) => {
  // client.help.set('cmd', `\`${client.config.command_prefix}cmd [character]\` to change the command_prefix for this bot. Current prefix: \`${command_prefix}\`.`);
  // client.help.set('list', `\`${client.config.command_prefix}list\` prints out the channel ids of all channels in the purge list.`);
   client.help.set('inrole', `\`${client.config.command_prefix}inrole role1, role2,..., roleN\` Checks which users are in given role(s).`);
-  client.help.set('purge', `\`${client.config.command_prefix}purge [count]\` clears a defined number non-pinned messages in given channel. __${client.config.permission_level}__ Only.`);
+  client.help.set('purge', `\`${client.config.command_prefix}purge [count]\` clears a defined number of non-pinned messages in given channel. __${client.config.permission_level}__ Only.`);
   client.help.set('purgeChannel', `\`${client.config.command_prefix}purgeChannel\` enables/disables purging for all future messages in given channel. __${client.config.permission_level}__ Only.`);
   client.help.set('eval', `\`${client.config.command_prefix}eval [code]\` evaluates given d.js code. __Bot Owner Only__.`);
   client.help.set(`exit`, `\`${
