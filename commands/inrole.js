@@ -27,7 +27,7 @@ exports.run = (client, msg, args) => {
      //otherwise prints out roles.
       for(let role of argv) {
           role = role.trim();
-          if(!rles.exists("name", role)) {
+          if(!rles.some(element => element.name.toLowerCase() === role.toLowerCase())) {
               msg.reply(`${role} does not exist on this server.`);
               return;
           }
