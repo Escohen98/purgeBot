@@ -76,7 +76,7 @@ exports.run = (client, msg, args) => {
     let c;
     if(mmbrs)
       c = mmbrs[0];
-    if(c.nickname != null)
+    if(c && c.nickname != null)
         message+=`\n* ${c.nickname}`;
     else
         message+=`\n* ${c.displayName}`;
