@@ -57,7 +57,7 @@ exports.run = (client, msg, args) => {
     //Prints members in given role(s).
     //Will print nickname if exists otherwise displayname.
     console.log("mmbrs.values(): ", mmbrs);
-    for (const c of mmbrs {
+    for (const c of mmbrs) {
         if(c.nickname != null)
             message+=`\n* ${c.nickname}`;
         else
