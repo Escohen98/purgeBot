@@ -14,15 +14,16 @@ exports.run = (client, msg, args) => {
         //Removes comma
           args[i] = args[i].replace(',', '').trim();
     }
+
     const rles = msg.guild.roles;
     let mmbrs = rles.find(element => element.name.toLowerCase() === args[0].toLowerCase());
       if(mmbrs) mmbrs = mmbrs.members; //Members in first listed role
     //Because interpreted values
-    const iterable = args.length > 0;
+    const iterable = args.length > 1;
     let argv;
     if(iterable) {
       argv = args.slice(1, args.length);
-      console.log("argv: ", argv);
+      console.log("argv:", argv);
 
      //Checks if role exists on server. If returns a does not exist message,
      //otherwise prints out roles.
@@ -46,6 +47,13 @@ exports.run = (client, msg, args) => {
           mmbrs = temp;
         }
       }
+    } else { //If only 1 role in parameters.
+      //Changing mmbrs to an array because not iterable if of size 1.
+      let temp = [];
+      for(const c of mmbrs.values()) {
+        temp.push(c)
+      }
+      mmbrs = temp;
     }
     var message = `#List of members in ${args[0]}`;
     if(iterable) {
@@ -53,15 +61,21 @@ exports.run = (client, msg, args) => {
           message += `, ${a}`;
       }
     }
-    if(mmbrs) {
+    if(mmbrs.length>1) {
     //Prints members in given role(s).
     //Will print nickname if exists otherwise displayname.
-    for (const c of mmbrs) {
+    for (const c of mmbrs) { //Two roles
         if(c.nickname != null)
             message+=`\n* ${c.nickname}`;
         else
             message+=`\n* ${c.displayName}`;
     }
+  } else { //if only one role because mmbrs is not iterable if of size 1.
+    const c = mmbrs[0];
+    if(c.nickname != null)
+        message+=`\n* ${c.nickname}`;
+    else
+        message+=`\n* ${c.displayName}`;
   }
     msg.channel.send(message, {code:'md'});
 }
