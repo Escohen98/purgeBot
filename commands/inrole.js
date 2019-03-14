@@ -49,11 +49,13 @@ exports.run = (client, msg, args) => {
       }
     } else { //If only 1 role in parameters.
       //Changing mmbrs to an array because not iterable if of size 1.
-      let temp = [];
-      for(const c of mmbrs.values()) {
-        temp.push(c)
+      if(mmbrs) {
+        let temp = [];
+        for(const c of mmbrs.values()) {
+          temp.push(c)
+        }
+        mmbrs = temp;
       }
-      mmbrs = temp;
     }
     var message = `#List of members in ${args[0]}`;
     if(iterable) {
