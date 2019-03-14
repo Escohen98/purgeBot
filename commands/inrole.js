@@ -63,7 +63,7 @@ exports.run = (client, msg, args) => {
           message += `, ${a}`;
       }
     }
-    if(mmbrs.length>1) {
+    if(mmbrs && mmbrs.length>1) {
     //Prints members in given role(s).
     //Will print nickname if exists otherwise displayname.
     for (const c of mmbrs) { //Two roles
