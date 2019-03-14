@@ -12,7 +12,6 @@ exports.run = (client, msg, args) => {
         }
         //Removes comma
           args[i] = args[i].replace(',', '').trim();
-          //args[i] = args[i].substring(0, args.length-1);
     }
     const rles = msg.guild.roles;
     console.log("args[0]: ", args[0]);
@@ -59,9 +58,9 @@ exports.run = (client, msg, args) => {
     //Will print nickname if exists otherwise displayname.
     for (const c of mmbrs.values()) {
         if(c.nickname != null)
-            message+=`\n * ${c.nickname}`;
+            message+=`\n* ${c.nickname}`;
         else
-            message+=`\n * ${c.displayName}`;
+            message+=`\n* ${c.displayName}`;
     }
   }
     msg.channel.send(message, {code:'md'});

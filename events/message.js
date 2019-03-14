@@ -30,13 +30,25 @@ module.exports = (client, msg) => {
 	//Ignore all bots
 	if(msg.author.bot) return;
 
-	//Ignore if user is below set permission level or not bot owner.
-	if (!(msg.member.hasPermission(client.config.permission_level) || msg.author.id === client.config.owner_id)) return;
-
-	console.log(client.commands);
-	//Standard for splitting a command string.
-	const args = msg.content.slice(client.config.command_prefix.length).trim().split(/ +/g);
-	var command = args.shift().toLowerCase();
+  //Removes the command prefix.
+  //Fix for when command takes no arguments
+  let cmmd = msg.content.substring(client.config.command_prefix.length, msg.content.length);
+  if(cmmd.includes(' '))
+    //Grabs the command (Seems to not work with commands that take no arguments)
+    cmmd = cmmd.substring(0, cmmd.indexOf(' '));
+	//Ignore if user is below set permission level or not bot owner unless
+  //command is in public command list.
+  console.log(`cmmd:-${cmmd}-`);
+  if (!client.config.public_cmds.includes(cmmd) &&
+      !(msg.member.hasPermission(client.config.permission_level) ||
+      msg.author.id === client.config.owner_id)){
+          msg.reply("You do not have permission to use this command.");
+         return;
+       }
+      console.log(client.commands);
+      //Standard for splitting a command string.
+      const args = msg.content.slice(client.config.command_prefix.length).trim().split(/ +/g);
+      var command = args.shift().toLowerCase();
 	console.log("command: ", command);
 	console.log("args: ", args);
 
