@@ -6,7 +6,7 @@ exports.run = (client, msg, args) => {
         msg.reply("Please specify at least 1 existing role.");
         return;
     } else if(!rles.some(element => element.name.toLowerCase() === args[0].toLowerCase())) {
-        msg.reply(`${args[0]} does not exist on this server.`);
+        msg.reply(`\`${args[0]}\` does not exist on this server.`);
         return;
     }
     //Combines args that are not separated by a comma.
@@ -33,7 +33,7 @@ exports.run = (client, msg, args) => {
       for(let role of argv) {
           role = role.trim();
           if(!rles.some(element => element.name.toLowerCase() === role.toLowerCase())) {
-              msg.reply(`${role} does not exist on this server.`);
+              msg.reply(`\`${role}\` does not exist on this server.`);
               return;
           }
           //TODO - Implement Multiple Roles.
