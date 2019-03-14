@@ -81,7 +81,7 @@ exports.run = (client, msg, args) => {
       c = mmbrs[0];
     if(c && c.nickname != null)
         message+=`\n* ${c.nickname}`;
-    else
+    else if (c)
         message+=`\n* ${c.displayName}`;
   }
     msg.channel.send(message, {code:'md'});
