@@ -5,7 +5,6 @@ exports.run = (client, msg, args) => {
     //Number of messages to delete
     var temp = parseInt(args[0]) || 0;//parseInt(msg.content.substring(6).trim()) || 0;
     console.log(temp);
-    msg.delete();
       //Discord has a limit of 100 messages.
 			if(temp < 1 || temp > 99)
 				msg.reply('Please select a number from 1-99');
@@ -21,18 +20,19 @@ exports.run = (client, msg, args) => {
 				msg.channel.fetchMessages({limit: (temp+1/*Because logic*/)}).then(messages => {
 				    const unpinnedMessages = messages.filter(msg => !(msg.pinned)); //A collection of messages that aren't pinned
 				    msg.channel.bulkDelete(unpinnedMessages, true);
-            let placeholder = 1;
             //For case of 1 message to be deleted.
             //if(temp == 0)
             //  placeholder = 0;
-				    msgsDeleted = unpinnedMessages.array().length-placeholder; // number of messages deleted
+				    msgsDeleted = unpinnedMessages.array().length; // number of messages deleted
             //Kind of wish I commented this when I originally coded it.
             client.flag = true;
-					msg.channel.send(msgsDeleted + ' message(s) deleted!');
-					logger(msgsDeleted + ' message(s) deleted!');
+					msg.channel.send(msgsDeleted-1 + ' message(s) deleted!');
+					logger(msgsDeleted-1 + ' message(s) deleted!');
+          //msg.delete();
 				}).catch(err => {
 					logger('Error while doing Bulk Delete', client.day);
 					logger(err, client.day);
+          msg.delete();
 				});
 			}
 
