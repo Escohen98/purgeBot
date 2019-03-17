@@ -1,4 +1,5 @@
 //Copyright (c) 2019, Eric Cohen.
+const Discord = require("discord.js");
 exports.run = (client, msg, args) => {
     console.log(args);
     //Makes sure user specifies a role
@@ -63,29 +64,52 @@ exports.run = (client, msg, args) => {
         mmbrs = temp;
       }
     }
-    var message = `#List of members in ${args[0]}`;
+    client.Embed = new Discord.RichEmbed()
+    .setImage(client.avatarURL)
+    .setAuthor("purgeBot", client.avatarURL)
+    .setAuthor("purgeBot", client.avatarURL);
+    //var message = `#List of members in${args[0]}`;
+    var message = `List of members in ${args[0]}`
     if(iterable) {
       for(const a of argv) {
           message += `, ${a}`;
       }
     }
+    client.Embed.setTitle(message);
+    client.Embed.setDescription(`${args.length} member(s).`);
+    console.log(mmbrs[0])
     if(mmbrs && mmbrs.length>1) {
     //Prints members in given role(s).
     //Will print nickname if exists otherwise displayname.
     for (const c of mmbrs) { //Two roles
         if(c.nickname != null)
-            message+=`\n* ${c.nickname}`;
+            //message+=`\n* ${c.nickname}`;
+            client.Embed.addField(c.nickname, `${c.user.username}#${c.user.discriminator}`);
         else
-            message+=`\n* ${c.displayName}`;
+            //message+=`\n* ${c.displayName}`;
+            var desc = "User";
+            console.log(client.user.bot);
+            if(client.user.bot == true)
+              desc = "Bot";
+            client.Embed.addField(`${c.user.username}#${c.user.discriminator}`, desc);
     }
   } else { //if only one role because mmbrs is not iterable if of size 1.
     let c;
     if(mmbrs)
       c = mmbrs[0];
     if(c && c.nickname != null)
-        message+=`\n* ${c.nickname}`;
-    else if (c)
-        message+=`\n* ${c.displayName}`;
+    //message+=`\n* ${c.nickname}`;
+      client.Embed.addField(c.nickname, `${c.user.username}#${c.user.discriminator}`);
+    else if (c) {
+    //message+=`\n* ${c.displayName}`;\
+        console.log(client.user.bot);
+        var desc = "User";
+      if(client.user.bot == true)
+        desc = "Bot";
+      client.Embed.addField(`${c.user.username}#${c.user.discriminator}`, desc);
+    }
   }
-    msg.channel.send(message, {code:'md'});
+    console.log(client.Embed);
+    //msg.channel.send(message, {code:'md'});
+    msg.channel.send(client.Embed);
 }
