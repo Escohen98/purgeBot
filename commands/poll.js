@@ -2,9 +2,7 @@
 //Creates a poll.
 exports.run = (client, msg, args) => {
   //Returns an emoji object of the gven emoji name.
-    function emoji(name) {
-      return client.emojis.find(emoji => emoji.name === name)
-    }
-    msg.react(emoji("uparrow").id);
-    msg.react(emoji("downarrow").id);
+
+    msg.react(client.emoji("uparrow").id);
+    msg.react(client.emoji("downarrow").id);
 }
