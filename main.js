@@ -5,12 +5,14 @@ const fs = require("fs");
 const client = new Discord.Client();
 const config = require("./config.json");
 // We also need to make sure we're attaching the config to the CLIENT so it's accessible everywhere!
-client.config = config;
-client.help = new Map();
-client.purge = new Set();
-client.day = " ";
-client.flag = false;
-client.logger = require("./logger.js");
+client.config = config; //COnfig file for bot.
+client.help = new Map(); //Map containing help descriptions.
+client.purge = new Set(); //Puege command
+client.day = " "; //String for logging
+client.flag = false; //I wish I commented this sooner..
+client.memebrs = new Array(); //Member array for inrole command.
+client.page = 0; //# of pages for inrole command
+client.logger = require("./logger.js"); //Enables logging.
 require("./modules/functions.js")(client);
 // This loop reads the /events/ folder and attaches each event file to the appropriate event.
 fs.readdir("./events/", (err, files) => {
