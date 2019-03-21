@@ -2,7 +2,7 @@
 const Discord = require("discord.js");
 const Embed = require("../modules/embed.js")(client);
 exports.run = (client, msg, args) => {
-
+    client.args = args;
     if(!reaction) { //Only reinitializes if new inrole command is invoked
                     //and not a reaction.
       client.members = Embed.getMembers(msg, args);
