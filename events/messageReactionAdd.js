@@ -1,9 +1,12 @@
 const Discord = require("discord.js");
-const Embed = require("../modules/embed.js")(client);
-module.exports = (reaction, user) => {
-  console.log("Reaction: ", reaction);
-  console.log("User: ", user);
-  if(user.bot) {
+module.exports = (client, reaction, member) => {
+  const Embed = require("../modules/embed.js").data;
+
+  //console.log("Reaction: ", reaction);
+  //console.log("member: ", member);
+  //console.log(reaction.message);
+  console.log("member.bot:", member.bot);
+  if(member.bot) {
     return;
   } else if (reaction.message == client.RichEmbed /*&& reaction.message.author == this bot*/) {
     let pages = (mmbrs.length-1)/20+1;//Each page = 20 users.
@@ -14,7 +17,8 @@ module.exports = (reaction, user) => {
     } else {
       return;
     }
-    //TODO - Figure out args, probably have to make global
-    reaction.message.edit(Embed.getEmbed(client.args, true));
+    reaction.message.edit(Embed.getEmbed(client, true))
+    .then(newMsg => console.log(`new embed added`))
+    .catch(console.err);
   }
 }

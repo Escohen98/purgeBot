@@ -1,9 +1,10 @@
 const Discord = require("discord.js");
 //Obtains and returns all members in given roles.
-exports.run = (client, msg, args, reaction = false) => {
-    console.log(args);
+const USER_PAGE_COUNT = 2; //Number of users to appear on each page.
+let methods = {
     //Makes sure user specifies a role
-  function getMembers(msg, args) {
+  getMembers(msg) {
+    const args = msg.client.args
     if (args.length < 1) {
         msg.reply("Please specify at least 1 existing role.");
         return;
@@ -66,39 +67,37 @@ exports.run = (client, msg, args, reaction = false) => {
       }
     }
     return mmbrs;
-  }
+  },
 
   //Creates a new RichEmbed containing 20 elements for inrole command.
   //@param arg (String) - first role paramater
   //@param argv Array<String>- remaining role parameters. Empty aray by default.
-  function getEmbed(args, reaction) {
-    let embed = new Discord.RichEmbed()
+  getEmbed(client, reaction) {
+    const args = client.args;
+    const embed = new Discord.RichEmbed()
     .setImage(client.avatarURL)
     .setColor("0xFF0000")
     .setAuthor("purgeBot", client.avatarURL);
 
     var message = `List of members in ${args[0]}`
-    if(iterable) {
+    if(args.length > 1) {
       let argv = args.spice(1, args.length);
       for(const a of argv) {
           message += `, ${a}`;
       }
     }
 
-    let mmbrs = Client.members;
+    let mmbrs = client.members;
     embed.setTitle(message);
     embed.setDescription(`${mmbrs.length} member(s).`);
     console.log(mmbrs[0])
     if(mmbrs && mmbrs.length>1) {
     //Prints members in given role(s).
     //Will print nickname if exists otherwise displayname.
-    let pages = (mmbrs.length-1)/20+1;//Each page = 20 users.
     if(!reaction) { //If the event call was from a command or reaction.
       client.page = 0;
-    } else if(client.page < pages) {
-      client.page++; //Creates a new page if call was from a reaction
     }
-    for (var i = client.page*20; i<mmbrs.length; i++) { //Two roles
+    for (var i = client.page*USER_PAGE_COUNT; i<mmbrs.length; i++) { //Two roles
         if(mmbrs[i].nickname != null)
             //message+=`\n* ${mmbrs[i].nickname}`;
             embed.addField(mmbrs[i].nickname, `${mmbrs[i].user.username}#${mmbrs[i].user.discriminator}`);
@@ -129,10 +128,11 @@ exports.run = (client, msg, args, reaction = false) => {
     }
   }
     return embed;
-  }
+  },
 
-  func sendEmbed(msg) {
-    let pages = (mmbrs.length-1)/20+1;
+  sendEmbed(msg) {
+    let client = msg.client;
+    let pages = (client.members.length-1)/USER_PAGE_COUNT+1;
     if(client.page == 0) {   //If first page, only reacts with forward arrow
       msg.channel.send(client.Embed)
       .then(embedMessage => (embedMessage.react('➡')))
@@ -151,4 +151,5 @@ exports.run = (client, msg, args, reaction = false) => {
         .catch(console.error)
      }
   }
-}
+};
+exports.data = methods;
