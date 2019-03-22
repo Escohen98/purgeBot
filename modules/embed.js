@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 //Obtains and returns all members in given roles.
-const USER_PAGE_COUNT = 2; //Number of users to appear on each page.
+
 let methods = {
     //Makes sure user specifies a role
   getMembers(msg) {
@@ -97,7 +97,7 @@ let methods = {
     if(!reaction) { //If the event call was from a command or reaction.
       client.page = 0;
     }
-    for (var i = client.page*USER_PAGE_COUNT; i<mmbrs.length; i++) { //Two roles
+    for (var i = client.page*client.USER_PAGE_COUNT; i<mmbrs.length; i++) { //Two roles
         if(mmbrs[i].nickname != null)
             //message+=`\n* ${mmbrs[i].nickname}`;
             embed.addField(mmbrs[i].nickname, `${mmbrs[i].user.username}#${mmbrs[i].user.discriminator}`);
@@ -132,7 +132,7 @@ let methods = {
 
   sendEmbed(msg) {
     let client = msg.client;
-    let pages = (client.members.length-1)/USER_PAGE_COUNT+1;
+    let pages = (client.members.length-1)/client.USER_PAGE_COUNT+1;
     if(client.page == 0) {   //If first page, only reacts with forward arrow
       msg.channel.send(client.Embed)
       .then(embedMessage => (embedMessage.react('➡')))

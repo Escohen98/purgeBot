@@ -13,6 +13,7 @@ client.flag = false; //I wish I commented this sooner..
 client.memebrs = new Array(); //Member array for inrole command.
 client.page = 0; //# of pages for inrole command
 client.logger = require("./logger.js"); //Enables logging.
+client.USER_PAGE_COUNT = 2; //Number of users to appear on each page.
 require("./modules/functions.js")(client);
 // This loop reads the /events/ folder and attaches each event file to the appropriate event.
 fs.readdir("./events/", (err, files) => {
