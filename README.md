@@ -34,6 +34,7 @@ Copyright (c) 2019, Eric Cohen.
 }
 ```
 
-##Other Notes
+## Other Notes
   * The contents of the help command are set in ready.js. You will need to change the end of the descriptions based on what permissions (permissions_level, public_cmds) you set in the config
   * The eval command seems to be broken. Try at your own risk.
+  * **This bot is no longer being developed and likely will not work**
